@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  database:
+    image: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_DATABASE: image_processing
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
